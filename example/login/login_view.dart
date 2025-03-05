@@ -19,7 +19,22 @@ class _LoginViewState extends State<_LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("login")
+      body: _buildBody(),
+    );
+  }
+
+  Widget _buildBody() {
+    return BlocBuilder<LoginCubit, LoginState>(
+      builder: (context, state) {
+        return state.maybeWhen(
+          failure: (error) {
+            return Text(error);
+          },
+          orElse: () {
+            return Text("login");
+          },
+        );
+      },
     );
   }
 }

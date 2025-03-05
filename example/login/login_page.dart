@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'login_cubit.dart';
+
 part 'login_view.dart';
 
 class LoginPage extends StatelessWidget {
@@ -14,7 +16,7 @@ class LoginPage extends StatelessWidget {
       },
       child: BlocListener<LoginCubit, LoginState>(
         listener: (context, state) {
-          state.when(failure: (errorMessage) {
+          state.whenOrNull(failure: (errorMessage) {
             _onShowErrorMessage(context, errorMessage: errorMessage);
           });
         },

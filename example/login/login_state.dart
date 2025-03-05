@@ -10,6 +10,6 @@ class LoginState with _$LoginState {
   const factory LoginState.success() = _Success;
 
   const factory LoginState.failure({
-    @required String errorMessage,
+    @Default("")  String errorMessage,
   }) = _Failure;
 }

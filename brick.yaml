@@ -1,5 +1,6 @@
 name: cubit_template
-description: A new brick created with the Mason CLI.
+description: A brick created some class template use bloc cubit with freezed.
+repository: https://github.com/duchv-2nf/cubit_template
 
 version: 0.1.0+1
 
