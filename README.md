@@ -1,11 +1,11 @@
-# cubit_template
+# list_cubit_template
 
 A brick created some class template use bloc cubit with freezed.
 
 ## How to use 🚀
 
 ```bash
-mason make cubit_template -o lib/pages --featureName example
+mason make list_cubit_template --featureName example -o lib/pages 
 
 # Generate freezed
 flutter pub run build_runner build --delete-conflicting-outputs
@@ -22,7 +22,7 @@ Replace __lib/pages__ by your folder;
 
 ## Outputs 📦
 ```
-mason make cubit_template -o lib/pages --featureName login
+mason make list_cubit_template -o lib/pages --featureName login
 ```
 
 ![image](./output.png)

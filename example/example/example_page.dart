@@ -1,26 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'login_cubit.dart';
+import 'example_cubit.dart';
 
-part 'login_view.dart';
+part 'example_view.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class ExamplePage extends StatelessWidget {
+  const ExamplePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) {
-        return LoginCubit();
+        return ExampleCubit();
       },
-      child: BlocListener<LoginCubit, LoginState>(
+      child: BlocListener<ExampleCubit, ExampleState>(
         listener: (context, state) {
-          state.whenOrNull(failure: (errorMessage) {
-            _onShowErrorMessage(context, errorMessage: errorMessage);
-          });
+          if (state.errorMessage.isNotEmpty) {
+            _onShowErrorMessage(
+              context,
+              errorMessage: state.errorMessage,
+            );
+          }
         },
-        child: _LoginView(),
+        child: const _ExampleView(),
       ),
     );
   }

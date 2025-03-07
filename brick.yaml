@@ -1,6 +1,6 @@
-name: cubit_template
+name: list_cubit_template
 description: A brick created some class template use bloc cubit with freezed.
-repository: https://github.com/duchv-2nf/cubit_template
+repository: https://github.com/duchv-2nf/list_cubit_template
 
 version: 0.1.0+1
 
